@@ -4,6 +4,6 @@ const { getDuelists, getMe, createProfile } = require('../controllers/duelistCon
 
 router.get('/', getDuelists);
 router.get('/me', getMe);
-router.post('/', createProfile)
+router.post('/', createProfile);
 
 module.exports = router;

@@ -5,6 +5,8 @@ const sequelize = require('./src/utils/database.js')
 const express = require('express')
 const app = express()
 
+app.use(express.json());
+
 app.get('/testDB', async (req, res) => {
     try {
         await sequelize.authenticate();
