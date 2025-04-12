@@ -1,7 +1,10 @@
-FROM node:20-alpine
+FROM node:23:slim AS build
 
-WORKDIR /home/node/app
-COPY package*.json .
+COPY . /app/.
+
+WORKDIR /app
 RUN npm install
-COPY . .
+
+EXPOSE 3000
+
 CMD [ "npm", "start" ]
